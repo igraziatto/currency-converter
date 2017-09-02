@@ -6,17 +6,17 @@ General currency converter developed in javascript without the use of any librar
 
 If you wish to use this in you project, simply add:
 
-<script type="text/javascript" src="yourpath/currencyConverter.min.js"></script>
+`<script type="text/javascript" src="yourpath/currencyConverter.min.js"></script>`
 
 on the <head> of you .html file.
 Then, after the window has loaded, instanciate with the command:
 
-var currencyConverter1 = new currencyConverter(document.getElementById("your-wrapper-element"));
-currencyConverter1.init();
+`var yourVarNameHere = new currencyConverter(document.getElementById("your-wrapper-element"));
+yourVarNameHere.init();`
 
 ## Prerequisites ##
 
-currencyConverter.min.js
+* currencyConverter.min.js
 
 Other than that, no prerequisites, currency-converter was written in plain Javascript :)
 
