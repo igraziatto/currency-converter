@@ -26,8 +26,8 @@ Other than that, no prerequisites, currency-converter was written in plain Javas
 2. Copy the html inside the <section class="currency-converter" id="currencyConverter1"> found in index.html for everything to work properly.
 3. Add the following command on your window.load:
   
-  var currencyConverter1 = new currencyConverter(document.getElementById("currencyConverter1"));
-  currencyConverter1.init();
+  `var currencyConverter1 = new currencyConverter(document.getElementById("currencyConverter1"));
+  currencyConverter1.init();`
   
   et voilá!
   
@@ -35,16 +35,16 @@ Other than that, no prerequisites, currency-converter was written in plain Javas
 
 currencyConverter has the following public properties and methods:
 
-  self: Element - The same element you passed to instantiate.
-  init: Function - Initiates the instance, gathering properties and adding events.
-  calculateAmount: Function - takes 2 parameters (amount, rate) as strings, returns the converted amount.
-  destroy: Function - Erase instance, remove events.
+ * self: Element - The same element you passed to instantiate.
+ * init: Function - Initiates the instance, gathering properties and adding events.
+ * calculateAmount: Function - takes 2 parameters (amount, rate) as strings, returns the converted amount.
+ * destroy: Function - Erase instance, remove events.
 
 ## Built With ##
 
-HTML5
-Javascript
-SCSS
+* HTML5
+* Javascript
+* SCSS
 
 ## Authors ##
 
