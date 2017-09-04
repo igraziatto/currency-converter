@@ -1,0 +1,80 @@
+/* ------------------------------------------
+	--- Grid system ---
+--------------------------------------------- */
+.grid-row{
+	width: 100%;
+	position: relative;
+	display: table; /* --- fallback ie9 --- */
+    display: flex;
+	clear: both;
+	border-collapse: collapse;
+}
+.grid-row:after {
+ 	content: "";
+ 	display: table;
+ 	clear: both;
+}
+.grid-row.gutter{
+	padding: 0 -#{$gutter} 0 -#{$gutter};
+}
+[class^="col-"]{
+	float: left;
+	display: table-cell; /* --- fallback ie9 --- */
+	min-width: $gutter; /* --- normalize firefox --- */
+	flex-wrap: wrap;
+}
+.grid-row.gutter > [class^="col-"]{
+	padding: 0 $gutter;
+}
+.grid-row.gutter > [class^="col-"]:first-child{
+	padding-left: 0;
+}
+.grid-row.gutter > [class^="col-"]:last-of-type{
+	padding-right: 0;
+}
+[class^="col-"] input,
+[class^="col-"] select{
+	width: 100%;
+	padding: 0.3em;
+	border: 1px solid #ccc;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+}
+@for $i from 1 through 12{
+	$w: ($i / 12) * 100%;
+	.col-dskt-#{$i}{
+		width: $w;
+	}
+}
+@media screen and (max-width: 961px){
+	@for $i from 1 through 12{
+		$w: ($i / 12) * 100%;
+		.col-tbl-#{$i}{
+			width: $w;
+		}
+	}
+}
+@media screen and (max-width: 768px){
+	.grid-row{
+		display: table;
+	}
+	.grid-row.gutter{
+		padding: 0 -#{$gutter-mbl} 0 -#{$gutter-mbl};
+	}
+	.grid-row.gutter > [class^="col-"]{
+		padding: 0 $gutter-mbl;
+	}
+	.grid-row.gutter > [class$="mbl-12"]{
+		margin-bottom: 10px;
+		padding: 0;
+	}
+	
+	@for $i from 1 through 12{
+		$w: ($i / 12) * 100%;
+		.col-mbl-#{$i}{
+			width: $w;
+		}
+	}
+}

@@ -1,0 +1,26 @@
+/* ------------------------------------------
+	--- Desktop style ---
+--------------------------------------------- */
+.currency-converter{
+	width: 400px;
+	padding: 20px 10px;
+	margin: 0 0 20px 20px;
+
+	input, select{
+		height: 27px;
+	}
+	.btn-disclaimer{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+	.disclaimer{
+		p{
+			margin: 0;
+		}
+	}
+}
+
+.currency-converter:first-child{
+	margin-left: 0;
+}

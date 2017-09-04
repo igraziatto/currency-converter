@@ -1,0 +1,13 @@
+@import "variables";
+@import "default";
+@import "grid";
+@import "desktop";
+// @media screen and (max-width: 961px){
+// 	@import "tablet";
+// }
+@media screen and (max-width: 768px){
+	@import "mobile";
+}
+
+	
+	

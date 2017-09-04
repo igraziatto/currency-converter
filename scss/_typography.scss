@@ -1,0 +1,64 @@
+/* ------------------------------------------
+	--- Grid system ---
+--------------------------------------------- */
+.grid-row{
+	width: 100%;
+	position: relative;
+	display: table; /* --- fallback ie9 --- */
+    display: flex;
+	clear: both;
+	border-collapse: collapse;
+}
+.grid-row:after {
+ 	content: "";
+ 	display: table;
+ 	clear: both;
+}
+.grid-row.gutter{
+	padding: 0 -#{$gutter} 0 -#{$gutter};
+}
+.col{
+	float: left;
+	display: table-cell; /* --- fallback ie9 --- */
+	display: flex;
+	flex: 1 1;
+	min-width: $gutter; /* --- normalize firefox --- */
+	flex-wrap: wrap;
+}
+.grid-row.gutter > .col{
+	padding: 0 $gutter;
+}
+.grid-row.gutter > .col:first-child{
+	padding-left: 0;
+}
+.grid-row.gutter > .col:last-of-type{
+	padding-right: 0;
+}
+.right{
+	float: right;
+}
+@for $i from 1 through 12{
+	$w: ($i / 12) * 100%;
+	.col-dskt-#{$i}{
+		width: $w;
+	}
+}
+@media screen and (max-width: 961px){
+	@for $i from 1 through 12{
+		$w: ($i / 12) * 100%;
+		.col-tbl-#{$i}{
+			width: $w;
+		}
+	}
+}
+@media screen and (max-width: 768px){
+	.grid-row{
+		display: table;
+	}
+	@for $i from 1 through 12{
+		$w: ($i / 12) * 100%;
+		.col-mbl-#{$i}{
+			width: $w;
+		}
+	}
+}

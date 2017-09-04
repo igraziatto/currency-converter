@@ -1,0 +1,75 @@
+/* ------------------------------------------
+	--- Default style ---
+--------------------------------------------- */
+.currency-converter{
+	font-family: $f-family;
+	font-size: $f-size-m;
+
+	float: left;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #999;
+}
+
+.currency-converter *,
+.currency-converter *:before,
+.currency-converter *:after{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.currency-converter{
+	picture,
+	img{
+		width: 100%;
+		height: auto;
+	}
+	fieldset{
+		padding: 0;
+		margin: 0;
+		border: none;
+	}
+	p,
+	label,
+	input, select{
+		display: block;
+		font-size: $f-size-m;
+	}
+	p{
+		padding: 0;
+		margin: 0 0 1em; 
+	}
+	label{
+		margin-bottom: 5px;
+	}
+	h2{
+		font-size: $f-size-l;
+		font-weight: normal;
+		padding: 0;
+		margin: 0 0 1em; 
+	}
+	.disclaimer{
+		 -webkit-transition: all 0.3s;
+		 -moz-transition: all 0.3s;
+		 -o-transition: all 0.3s;
+		 transition: all 0.3s;
+	}
+	/* ---------- modifiers ---------- */
+	.margin-b-10{
+		margin-bottom: 10px;
+	}
+	.no-spin::-webkit-inner-spin-button,
+	.no-spin::-webkit-outer-spin-button{
+	    -webkit-appearance: none !important;
+	    margin: 0 !important;
+	    -moz-appearance:textfield !important;
+	}
+}
+
