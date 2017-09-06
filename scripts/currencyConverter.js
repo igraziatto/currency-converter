@@ -1,7 +1,7 @@
 /**
  * Plugin that takes an amount and rate given by the user and converts accordingly
  * @author Isis Graziatto <https://github.com/igraziatto>
- * @version 1.0.0
+ * @version 1.1.0
  */
 /** 
 *
@@ -94,6 +94,7 @@ CurrencyConverter.prototype.addEvents = function(){
 *
 * @param {string} amount - The initial amount.
 * @param {string} rate - The rate.
+* @return {float} returns rate / amount.
 */
 CurrencyConverter.prototype.calculateAmount = function(amount, rate){
 	return parseFloat(rate) / parseFloat(amount);
@@ -103,6 +104,7 @@ CurrencyConverter.prototype.calculateAmount = function(amount, rate){
 *
 * @param {string} base - the choosen rate name. Ex: "USD", "CAD", "EUR".
 * @param {function} callback - a function to be called if the AJAX call is successful.
+* @return {object} data - data fetched from AJAX call.
 */
 CurrencyConverter.prototype.getRates = function(base, callback){
 	var request = new XMLHttpRequest();
@@ -175,7 +177,7 @@ CurrencyConverter.prototype.submitCurrencyForm = function(inputValues){
 /**
 * Toggles the style visibility and opacity in a given element.
 *
-* @param {DOM object} element - the designated element.
+* @param {DOM|object} element - the designated element.
 */
 toggleVisibility = function(element){
 	if(element.style.visibility === "hidden"){
